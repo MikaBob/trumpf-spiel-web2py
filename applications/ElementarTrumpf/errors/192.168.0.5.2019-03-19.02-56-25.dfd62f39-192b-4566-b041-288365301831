@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.IOError'> [Errno 2] No such file or directory: '/var/www/python/web2py/applications/ElementarTrumpf/languages/en.py'"
+p3
+sS'layer'
+p4
+S'/var/www/python/web2py/applications/ElementarTrumpf/controllers/ElementarTrumpfControl.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x6ef5dc80, file "/var/www/python/web2py/applications/ElementarTrumpf/controllers/ElementarTrumpfControl.py", line 1>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/var/www/python/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/var/www/python/web2py/applications/ElementarTrumpf/controllers/ElementarTrumpfControl.py", line 64, in <module>\n  File "/var/www/python/web2py/gluon/globals.py", line 421, in <lambda>\n    self._caller = lambda f: f()\n  File "/var/www/python/web2py/applications/ElementarTrumpf/controllers/ElementarTrumpfControl.py", line 13, in kartenZiehen\n    T.set_current_languages(\'de\')\n  File "/var/www/python/web2py/gluon/languages.py", line 578, in set_current_languages\n    self.force(self.http_accept_language)\n  File "/var/www/python/web2py/gluon/languages.py", line 690, in force\n    self.t = read_dict(self.language_file)\n  File "/var/www/python/web2py/gluon/languages.py", line 184, in read_dict\n    lambda: read_dict_aux(filename))\n  File "/var/www/python/web2py/gluon/cfs.py", line 41, in getcfs\n    return filter() if callable(filter) else \'\'\n  File "/var/www/python/web2py/gluon/languages.py", line 184, in <lambda>\n    lambda: read_dict_aux(filename))\n  File "/var/www/python/web2py/gluon/languages.py", line 169, in read_dict_aux\n    lang_text = read_locked(filename).replace(b\'\\r\\n\', b\'\\n\')\n  File "/var/www/python/web2py/gluon/packages/dal/pydal/contrib/portalocker.py", line 218, in read_locked\n    fp = LockedFile(filename, \'rb\')\n  File "/var/www/python/web2py/gluon/packages/dal/pydal/contrib/portalocker.py", line 182, in __init__\n    self.file = open_file(filename, mode)\n  File "/var/www/python/web2py/gluon/packages/dal/pydal/contrib/portalocker.py", line 170, in open_file\n    f = open(filename, mode)\nIOError: [Errno 2] No such file or directory: \'/var/www/python/web2py/applications/ElementarTrumpf/languages/en.py\'\n'
+p11
+s.

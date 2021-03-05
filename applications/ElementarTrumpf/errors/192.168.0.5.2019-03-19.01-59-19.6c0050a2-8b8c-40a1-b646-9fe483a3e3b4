@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.TypeError'> list indices must be integers, not str"
+p3
+sS'layer'
+p4
+S'/var/www/python/web2py/applications/ElementarTrumpf/controllers/ElementarTrumpfControl.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x6f53f7b8, file "/var/www/python/web2py/applications/ElementarTrumpf/controllers/ElementarTrumpfControl.py", line 1>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/var/www/python/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/var/www/python/web2py/applications/ElementarTrumpf/controllers/ElementarTrumpfControl.py", line 40, in <module>\n  File "/var/www/python/web2py/gluon/globals.py", line 421, in <lambda>\n    self._caller = lambda f: f()\n  File "/var/www/python/web2py/applications/ElementarTrumpf/controllers/ElementarTrumpfControl.py", line 31, in kartenZiehen\n    humanMonster["humanMonsterValue"] = humanMonster[0]\nTypeError: list indices must be integers, not str\n'
+p11
+s.

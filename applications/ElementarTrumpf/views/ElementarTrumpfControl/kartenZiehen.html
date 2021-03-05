@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	  <title>Elementar Trumpf</title>
+	  <link rel="stylesheet" href="/ElementarTrumpf/static/css/styleshit.css"></link>
+	</head>
+
+	<body style="width: 800px; text-align:center; margin: auto">
+	  <header id="header">
+		  <div style="height: 100px">
+			  <div class="spieler"><p>{{=session.humanScore}}</p></div>
+			  <div class="spieler" style="float:right;"><p style="float: right;">{{=session.aiScore}}</p></div>
+		  </div>
+	  </header>
+		<div id="arena" style="height: 400px; width:100%; font-size: 20px;"> 
+			<div id="k1" class="karte">
+				{{if humanMonsterValue:}}
+				<div style="">
+					<img src="/ElementarTrumpf/static/images/{{=humanMonsterValue[0]}}"></img>
+				</div>
+				<div class= "eigenschaften">
+					<ul>
+						<li>Name: {{=humanMonsterValue[1]}}</li>
+						<li>{{=humanMonsterValue[2]}}: {{=humanMonsterValue[3]}}</li>
+					</ul>
+				</div>
+				{{else:}}
+				<div style="">
+					<img src="/ElementarTrumpf/static/images/VK.gif"></img>
+				</div>
+				<div class= "eigenschaften"></div>
+				{{pass}}
+			</div>
+
+			<div id="vs">
+				<img src="/ElementarTrumpf/static/images/VS.gif"></img>
+			</div>
+
+			<div id="k2" class="karte">
+				{{if aiMonsterValue:}}
+				<div style="">
+					<img src="/ElementarTrumpf/static/images/{{=aiMonsterValue[0]}}"></img>
+				</div>
+				<div class= "eigenschaften">
+					<ul>
+						<li>Name: {{=aiMonsterValue[1]}}</li>
+						<li>{{=aiMonsterValue[2]}}: {{=aiMonsterValue[3]}}</li>
+					</ul>
+				</div>
+				{{else:}}
+				<div style="">
+					<img src="/ElementarTrumpf/static/images/VK.gif"></img>
+				</div>
+				<div class= "eigenschaften"></div>
+				{{pass}}
+			</div>
+		</div>
+		<footer style="height: 100px; width:100%; font-size: 20px;">
+		{{if humanMonsterValue:}}
+			{{if humanMonsterValue[3] > aiMonsterValue[3]:}}
+				<div><p>{{=T('succeed')}}</p></div>
+			{{else:}}
+				<div><p>{{=T('failed')}}</p></div>
+			{{pass}}
+		{{pass}}
+			<div> Wähle eine Eigenschaft!
+				<ul style="list-style:none;">
+					<li><a href="{{=URL(vars=dict(choice='groesse')) }}">Größe</a></li>
+					<li><a href="{{=URL(vars=dict(choice='initiative')) }}">Initiative</a></li>
+					<li><a href="{{=URL(vars=dict(choice='staerke')) }}">Stärke</a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
